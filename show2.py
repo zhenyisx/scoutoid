@@ -2,6 +2,7 @@
 
 import streamlit as st
 import pandas as pd
+from io import StringIO
 from google.oauth2 import service_account
 from google.cloud import storage
 
@@ -26,6 +27,9 @@ content = read_file(bucket_name, file_path)
 
 # Print results.
 st.write(content)
+contentIO = StringIO(content)
+df = pd.read_csv(contentIO, sep=",")
+st.dataframe(df)
 # st.dataframe(pd.read_clipboard(content))
 for line in content.strip().split("\n"):
     st.write(line)
