@@ -23,7 +23,7 @@ def read_file(bucket_name, score_file_path, ranking_file_path):
 
 bucket_name = "scoutoid-streamlit-bucket"
 scores_file_path = "schedule.csv"
-rankings_file_path = "rankings.csv"
+rankings_file_path = "ranking.csv"
 
 scores, rankings = read_file(bucket_name, file_path)
 
