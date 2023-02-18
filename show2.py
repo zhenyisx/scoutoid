@@ -25,7 +25,7 @@ bucket_name = "scoutoid-streamlit-bucket"
 scores_file_path = "schedule.csv"
 rankings_file_path = "ranking.csv"
 
-scores, rankings = read_file(bucket_name, file_path)
+scores, rankings = read_file(bucket_name, scores_file_path, rankings_file_path)
 
 # Print results.
 
