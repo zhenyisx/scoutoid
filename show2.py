@@ -1,6 +1,7 @@
 # streamlit_app.py
 
 import streamlit as st
+import pandas as pd
 from google.oauth2 import service_account
 from google.cloud import storage
 
@@ -25,5 +26,6 @@ content = read_file(bucket_name, file_path)
 
 # Print results.
 st.write(content)
+st.dataframe(pd.read_csv(content))
 for line in content.strip().split("\n"):
     st.write(line)
