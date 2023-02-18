@@ -26,6 +26,6 @@ content = read_file(bucket_name, file_path)
 
 # Print results.
 st.write(content)
-st.dataframe(pd.read_clipboard(content))
+# st.dataframe(pd.read_clipboard(content))
 for line in content.strip().split("\n"):
     st.write(line)
