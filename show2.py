@@ -21,7 +21,7 @@ def read_file(bucket_name, file_path):
     return content
 
 bucket_name = "scoutoid-streamlit-bucket"
-file_path = "schedule_tmp.csv"
+file_path = "schedule.csv"
 
 content = read_file(bucket_name, file_path)
 
