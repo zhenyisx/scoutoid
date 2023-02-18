@@ -26,10 +26,21 @@ file_path = "schedule.csv"
 content = read_file(bucket_name, file_path)
 
 # Print results.
-st.write(content)
-contentIO = StringIO(content)
-df = pd.read_csv(contentIO, sep=",")
-st.dataframe(df)
-# st.dataframe(pd.read_clipboard(content))
-for line in content.strip().split("\n"):
-    st.write(line)
+
+
+tab1, tab2 = st.tabs(["Scores", "Rankings"])
+
+with tab1:
+   st.header("Scores")
+   df = pd.read_csv(StringIO(content), sep=",")
+   st.dataframe(df)
+
+with tab2:
+   st.header("Rankings")
+   st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+
+    
+    
+# st.write(content)
+# for line in content.strip().split("\n"):
+#     st.write(line)
