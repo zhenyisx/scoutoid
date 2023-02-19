@@ -28,7 +28,7 @@ rankings_file_path = "rankings.csv"
 scores, rankings = read_file(bucket_name, scores_file_path, rankings_file_path)
 
 # Print results.
-
+st.title("CCS Girls Soccer 2022/2023 Season")
 
 tab1, tab2 = st.tabs(["Scores", "Rankings"])
 
@@ -42,8 +42,3 @@ with tab2:
    df = pd.read_csv(StringIO(rankings), sep=",")
    st.dataframe(df)
 
-    
-    
-# st.write(content)
-# for line in content.strip().split("\n"):
-#     st.write(line)
