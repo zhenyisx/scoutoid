@@ -22,8 +22,8 @@ def read_file(bucket_name, score_file_path, ranking_file_path):
     return scores, rankings
 
 bucket_name = "scoutoid-streamlit-bucket"
-scores_file_path = "schedule.csv"
-rankings_file_path = "ranking.csv"
+scores_file_path = "scores.csv"
+rankings_file_path = "rankings.csv"
 
 scores, rankings = read_file(bucket_name, scores_file_path, rankings_file_path)
 
