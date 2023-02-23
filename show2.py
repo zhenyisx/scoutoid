@@ -29,7 +29,7 @@ scores, rankings = read_file(bucket_name, scores_file_path, rankings_file_path)
 
 # Print results.
 st.title("CCS Girls Soccer 2022/2023 Season")
-st.caption("Updated daily on 2/17/2023")
+st.caption("Updated on 2/21/2023")
 
 tab1, tab2 = st.tabs(["Scores", "Rankings"])
 
