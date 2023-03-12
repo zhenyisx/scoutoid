@@ -22,14 +22,14 @@ def read_file(bucket_name, score_file_path, ranking_file_path):
     return scores, rankings
 
 bucket_name = "scoutoid-streamlit-bucket"
-scores_file_path = "scores_2223.csv"
-rankings_file_path = "rankings_2223.csv"
+scores_file_path = "scores_2223_03112023.csv"
+rankings_file_path = "rankings_2223_03112023.csv"
 
 scores, rankings = read_file(bucket_name, scores_file_path, rankings_file_path)
 
 # Print results.
 st.title("CCS Girls Soccer 2022/2023 Season")
-st.caption("Updated on 2/21/2023")
+st.caption("Updated on 3/11/2023")
 
 tab1, tab2 = st.tabs(["Scores", "Rankings"])
 
