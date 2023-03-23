@@ -19,7 +19,7 @@ def read_file(bucket_name, score_file_path, ranking_file_path, teams_file_path):
     bucket = client.bucket(bucket_name)
     scores = bucket.blob(score_file_path).download_as_string().decode("utf-8")
     rankings = bucket.blob(ranking_file_path).download_as_string().decode("utf-8")
-    teams = bucket.blob(ranking_file_path).download_as_string().decode("utf-8")
+    teams = bucket.blob(teams_file_path).download_as_string().decode("utf-8")
     return scores, rankings, teams
 
 bucket_name = "scoutoid-streamlit-bucket"
